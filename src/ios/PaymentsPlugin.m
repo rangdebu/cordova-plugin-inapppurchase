@@ -39,7 +39,7 @@
                                  @"description": NILABLE(product.localizedDescription),
                                  @"price": NILABLE([RMStore localizedPriceOfProduct:product]),
                                  @"priceAmount": NILABLE(product.price),
-                                 @"currencyCode": NILABLE(product.priceLocale.currencyCode),
+                                 @"currencyCode": NILABLE([product.priceLocale objectForKey:NSLocaleCurrencyCode]),
                               }];
     }
     [result setObject:validProducts forKey:@"products"];
